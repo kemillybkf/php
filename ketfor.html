@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h3>CADASTRO</h3>
+    <form  action="ketfor.php" method="post">
+        Nome: <input type="text" name="nome" id="nome"><br>
+        E-mail: <input type="email" name="email" id="email"><br>
+        Senha: <input type="password" name="senha" id="senha"><br>
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+    
+    <form  action="ketfor.php" method="post">
+        <p>SELECIONE AS LINGUAGENS:</p>
+        <input type="checkbox" name="linguagens[]" value="HTML">HTML<br>
+        <input type="checkbox" name="linguagens[]" value="CSS">CSS<br>
+        <input type="checkbox" name="linguagens[]" value="PHP">PHP<br>
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
