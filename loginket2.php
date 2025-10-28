@@ -1,3 +1,4 @@
+
 <?php
     session_start();
     include"config.php";
@@ -11,6 +12,12 @@
             if ($usuario["email"]&& password_verify($senha,$usuario['senha'])){
             $_SESSION["usuario_id"] = $usuario["id"];
             $_SESSION["usuario_nome"] = $usuario["nome"];
+            $_SESSION["usuario"] = $email;
+            if (isset($_POST['lembrar'])) {
+                setcookie('lembrar-email', $email, time() + 3600, "/");
+            }else{
+                setcookie('lembrar-email', '', time() - 3600, "/");
+            }
             header("Location: ketp.php");
             exit;
             }else{
